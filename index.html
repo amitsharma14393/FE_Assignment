@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="hubstaff">
+    <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title> Hubstaff Projects | Zeta </title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header id="siteHeader">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4><strong>Hubstaff Projects</strong></h4>
+                    </div>
+                    <!-- convert later to offset -->
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-2 pull-right;">
+                        
+                            <div style="width:198px;height:40px;float:right;">
+                                <img src="img/user_pic.png">
+                            </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="user">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12" style="text-align:center;">
+                        <h3>Graphic Design</h3>   
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <main id="tasks" style="background-color:#f2f5f7;" ng-controller="MainController">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- tasksHeader starts -->
+                    <div class="col-md-3" style="overflow-y:auto;">
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric" id="tasksHeader">
+                                IDEAS/ TASKS
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric cardGenericExtra">
+                                <input type="text" class="cardtextBox" ng-model="name" placeholder="Add a card...">
+                            </div>
+                        </div>
+                        <card-box ng-repeat="task in tasks|filter:{status:'start'}"></card-box>
+                    </div>
+                    <!-- taskheaders end -->
+
+                    <!-- inprogress starts -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric" id="inprogressHeader">
+                                IN PROGRESS
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric cardGenericExtra">
+                                <input type="text" class="cardtextBox" placeholder="Add a card...">
+                            </div>
+                        </div>
+                        <card-box ng-repeat="task in tasks|filter:{status:'in progress'}"></card-box>
+
+
+
+                        
+                    </div>
+                    <!-- inprogress ends-->
+                    
+                    <!-- reviewHeader starts -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric" id="reviewHeader">
+                                READY FOR REVIEW
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric cardGenericExtra">
+                                <input type="text" class="cardtextBox" placeholder="Add a card...">
+                            </div>
+                        </div>
+                        <card-box ng-repeat="task in tasks|filter:{status:'complete'}"></card-box>
+
+
+                        
+
+
+                    </div>
+                    <!-- reviewHeader ends -->
+                    <!-- completeHeader starts -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric" id="completeHeader">
+                                APPROVED
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 cardGeneric cardGenericExtra">
+                                <input type="text" class="cardtextBox" placeholder="Add a card...">
+                            </div>
+                        </div>
+                        <card-box ng-repeat="task in tasks|filter:{status:'approve'}"></card-box>
+
+                       
+
+
+
+                    </div>
+                    <!-- completeHeader ends -->
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular/app.js"></script>
+        <script type="text/javascript" src="js/angular/appController.js"></script>
+        <script type="text/javascript" src="js/angular/appDirective.js"></script>
+    </body>
+</html>

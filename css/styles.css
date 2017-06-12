@@ -1,0 +1,61 @@
+/* General Styles */
+.cardGeneric{
+    box-sizing:border-box;
+    padding:7px;
+    margin:5px 15px;
+    font-size:1em;
+}
+
+.cardGenericExtra{
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.cardtextBox{
+  padding:5px;
+   width:100%;
+}
+
+.card{
+    background-color:white;
+    padding:7px;
+}
+
+.imgParentDiv{
+    width:198px;
+    height:40px;
+}
+
+/* element specific */
+img{
+    max-width:100%;
+    max-height: 100%;
+    border-radius:25px;
+}
+
+/* --- site specific styles--- */
+#siteHeader{
+    border-bottom:1px solid #d4d8db;
+}
+/* Main Section Styles */
+
+#tasksHeader{ 
+    background-color:#6196ed;
+    color:white;
+    overflow:auto;
+}
+#inprogressHeader{
+    background-color:#ef882d;
+    color:white;
+    overflow:auto;
+}
+#reviewHeader{
+    background-color: #7842dd;
+    color:white;
+    overflow:auto;
+}
+#completeHeader{
+    background-color: #48ef43;
+    color:white;
+    overflow:auto;
+}
